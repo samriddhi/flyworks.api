@@ -1,0 +1,43 @@
+{
+  "name": "Video",
+  "plural": "videos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "comments": ""
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "userId": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": true,
+      "comments": "id of employee entering video"
+    },
+    "createdDate": {
+      "type": "date",
+      "required": true,
+      "comments": "entry date of video"
+    },
+    "modifiedTime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

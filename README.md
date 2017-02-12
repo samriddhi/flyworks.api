@@ -1,16 +1,6 @@
-# flyworks.api
-Install either node or node version manager https://github.com/coreybutler/nvm-windows (windows version) 
-
-Versions im using
-$ node --version
-v7.4.0
-
-$ npm -v
-4.0.5
-
-Install all the node modules from package.json 
-$ npm install 
-
-After install is finished run 
-$ npm run dev 
-For now I have only done a dev environment I have the script to do npm start but havent done anything. Still more updates to come!
+1. Open Url http://localhost:3000/explorer/ to see exposed rest APIs
+2. Open Url http://localhost:3000 for web site homepage
+3. Type strong-studio in parent folder to do basic addition & updation on models & datasources
+4. Server Folder contains all Backend APIs and configurations.
+5. Client Folder contains frontend using angular app  
+6. Common Folder contains models in use for backend APIs. Their references with data sources are in server folder .

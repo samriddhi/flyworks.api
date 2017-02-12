@@ -1,0 +1,57 @@
+{
+  "name": "Employee",
+  "plural": "employees",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "companyId": {
+      "type": "string",
+      "required": true,
+      "comments": "Id of employee in company"
+    },
+    "login": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string",
+      "required": true,
+      "comments": "login user name"
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "comments": "login password"
+    },
+    "role": {
+      "type": "string",
+      "required": true,
+      "comments": "company role "
+    },
+    "privilege": {
+      "type": "string",
+      "comments": ""
+    },
+    "contactInfo": {
+      "type": "string",
+      "comments": "name, mobile , address of employee"
+    },
+    "createdDate": {
+      "type": "date",
+      "required": true,
+      "comments": "entry date of document"
+    },
+    "modifiedDate": {
+      "type": "date",
+      "required": true,
+      "comments": "last modified time"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

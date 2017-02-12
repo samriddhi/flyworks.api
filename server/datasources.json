@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "flyworks": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "flyworks",
+    "password": "california",
+    "name": "flyworks",
+    "user": "developer",
+    "connector": "mongodb"
+  }
+}
