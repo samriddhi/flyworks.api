@@ -17,3 +17,5 @@ Things to do:
 4. Server Folder contains all Backend APIs and configurations.
 5. Client Folder contains frontend using angular app  
 6. Common Folder contains models in use for backend APIs. Their references with data sources are in server folder .
+7. ejs is added as template engine in dependencies and the same is set in server.js
+8. configuration like indexFile are defined in config.local.js
