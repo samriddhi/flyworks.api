@@ -7,27 +7,28 @@
 
 /**
  * @ngdoc overview
- * @name loopbackExampleFullStackApp
+ * @name flyworksApp
  * @description
- * # loopbackExampleFullStackApp
+ * # Entry point for angular app of flyworks
  *
  * Main module of the application.
  */
-angular
-  .module('flyworksApp', [
-    'ngRoute'
-  ])
-  .config(function ($routeProvider, $locationProvider) {
+
+ //Defining Root App Module
+var flyworksApp = angular.module('flyworksApp', ['ngRoute']);
+
+//Defining routes for different locations
+flyworksApp.config(function($routeProvider, $locationProvider) {
     Object.keys(HomepageRoutes)
-      .forEach(function(route) {
-        var routeDef = HomepageRoutes[route];
-        $routeProvider.when(route, routeDef);
-      });
+        .forEach(function(route) {
+            var routeDef = HomepageRoutes[route];
+            $routeProvider.when(route, routeDef);
+        });
 
     $routeProvider
-      .otherwise({
-        redirectTo: '/'
-      });
+        .otherwise({
+            redirectTo: '/'
+        });
 
     $locationProvider.html5Mode(true);
-  });
+});
