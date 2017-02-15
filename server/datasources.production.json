@@ -1,14 +1,1 @@
-{
-    "db": {
-        "name": "db",
-        "connector": "memory"
-    },
-    "flyworks":{
-        "host": "",
-        "port": 0,
-        "url": "",
-        "database": "flyworks",
-        "name": "flyworks",
-        "connector": "mongodb"
-    }
-}
+{}

@@ -5,9 +5,11 @@ To Install Project:
 
 Changes:
 * Removed password for localhost database.
+* Added the same again due to conflict issues .
 
 Things to do:
 * Add production datasources
+* Resolve Conflicts between datasources.json, datasources.local.json, datasources.production.json
 
 
 
@@ -20,3 +22,4 @@ Things to do:
 7. ejs is added as template engine in dependencies and the same is set in server.js
 8. configuration like indexFile are defined in config.local.js
 9. "files" field in middleware.json is pointed to client/site/ folder to load angular files. This field is used to load static content in loopback.
+10. Added Dependency package of request to allow rest api calls on loopback from node.
