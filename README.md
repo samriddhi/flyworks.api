@@ -23,3 +23,5 @@ Things to do:
 8. configuration like indexFile are defined in config.local.js
 9. "files" field in middleware.json is pointed to client/site/ folder to load angular files. This field is used to load static content in loopback.
 10. Added Dependency package of request to allow rest api calls on loopback from node.
+11. Added body parser json dependency in loopback middleware.json under element named as parse.
+12. Query Collection added in DB.

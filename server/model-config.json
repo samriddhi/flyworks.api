@@ -39,5 +39,9 @@
   "Employee": {
     "dataSource": "flyworks",
     "public": true
+  },
+  "Query": {
+    "dataSource": "flyworks",
+    "public": true
   }
 }

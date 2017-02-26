@@ -1,21 +1,24 @@
 module.exports = function(app) {
     var request = require("request");
     app.post('/submit', function(req, res) {
-        var formData = {
-            "url": "google.com",
-            "title": "VIDEO!22222",
-            "description": "dddddddddddddddddd",
-            "userId": "1111111111111",
-            "createdDate": "2017-02-15T19:31:07.031Z",
-            "modifiedTime": "2017-02-15T19:31:07.031Z"            
+        var BaseUrl = "http://0.0.0.0:4000/api/";
+        var url = BaseUrl + "queries";
+        var userDetails = req.body.userDetails;
+        var data = {
+            "name": userDetails.name,
+            "email": userDetails.email,
+            "mobile": userDetails.mobile,
+            "product": {},
+            "message": userDetails.message,
+            "Source": pageSource,            
+            "created": "2017-02-26T18:40:06.681Z",                        
         }
         console.log("form submitted at server");
-        console.log(req.body);
         request.post({
-            url: 'http://0.0.0.0:4000/api/videos',
-            form: formData
+            url: url,
+            form: data
         }, function(err, httpResponse, body) {
-        	console.log('response returned');
+            console.log('response returned');
         });
 
     });
