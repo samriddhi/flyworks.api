@@ -1,0 +1,15 @@
+{
+    "name": "Query",
+    "plural": "queries",
+    "base": "PersistedModel",
+    "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

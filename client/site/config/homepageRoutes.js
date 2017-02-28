@@ -1,10 +1,10 @@
 HomepageRoutes = {
     "/": {
-        "controller": "HomeCtrl",
-        "templateUrl": "/views/homepage.ejs"
+        "controller": "homeController",
+        "templateUrl": "/views/homepage.html"
     },
     "/contact": {
-        "controller": "contactCtrl",
+        "controller": "contactController",
         "templateUrl": "/views/contact.html"
     }
 }
