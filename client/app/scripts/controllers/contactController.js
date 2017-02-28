@@ -1,4 +1,4 @@
-flyworksApp.controller('contactCtrl', function($scope, $http) {    
+flyworksApp.controller('contactController', function($scope, $http) {    
 
     $scope.submit = function() {
         var pageInfo = {
