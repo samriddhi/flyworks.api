@@ -1,12 +1,9 @@
 flyworksApp.controller('contactController', function($scope, $http) {    
 
     $scope.submit = function() {
-        var pageInfo = {
-            source: "HOMEPAGE"
-        };
         var data = {
             userDetails: this.userDetails,
-            pageInfo: pageInfo
+            querySource: "HOMEPAGE"
         };
         
         var config = {};

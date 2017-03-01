@@ -1,15 +1,14 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Flyworks Media</title>
-
     <!--
     The base allows us to use relative links to resources even when
     this page was served from non-root URL, e.g. '/my/todos'
     -->
     <base href="/">
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -20,34 +19,28 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="assets/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="flyworksApp">
+</head>
+
+<body ng-app="flyworksApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <!-- Add your site or application content here -->
-
     <h1>Welcome to Flyworks Media</h1>
-
     <div class="header">
-      <ul class="navigation">
-        <li><a ng-href="/">Home</a></li>
-        <li><a ng-href="/login">Login</a></li>
-        <li><a ng-href="/contact">Contact</a></li>
-      </ul>
+        <ul class="navigation">
+            <li><a ng-href="/">Home</a></li>
+            <li><a ng-href="/login">Login</a></li>
+            <li><a ng-href="/contact">Contact</a></li>
+        </ul>
     </div>
-
     <div class="container view-container">
-      <div ng-view></div>
+        <div ng-view></div>
     </div>
-    
-
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <!--
@@ -58,20 +51,17 @@
     -->
     <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js({.tmp,ngapp,.}) scripts/scripts.js -->        
-
-         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
-         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-
-        <script src="scripts/app.module.js"></script>
-        <script src="scripts/app.config.js"></script>
-        <!-- CONTROLLERS -->
-        <script src="scripts/controllers/homeController.js"></script>
-        <script src="scripts/controllers/contactController.js"></script>
-
-        <!-- MODULES -->
-        <script src="scripts/modules/testModule.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,ngapp,.}) scripts/scripts.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script src="scripts/app.module.js"></script>
+    <script src="scripts/app.config.js"></script>
+    <!-- CONTROLLERS -->
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/contactController.js"></script>
+    <!-- MODULES -->
+    <script src="scripts/modules/testModule.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

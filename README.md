@@ -2,6 +2,7 @@ To Install Project:
 1. Open terminal and run 'npm install' ( for the first time )
 2. Run mongodb (go to mongo bin and run mongodb)
 3. Open terminal and run 'npm start'
+4. For Dev purposes, open terminal and run "npm run-script dev"
 
 Changes:
 * Removed password for localhost database.
@@ -25,3 +26,4 @@ Things to do:
 10. Added Dependency package of request to allow rest api calls on loopback from node.
 11. Added body parser json dependency in loopback middleware.json under element named as parse.
 12. Query Collection added in DB.
+13. Added Utilities Folder in server.
