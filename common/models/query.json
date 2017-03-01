@@ -1,0 +1,54 @@
+{
+    "name": "Query",
+    "plural": "queries",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "name": {
+            "type": "string",
+            "required": true,
+            "index": true,
+            "comments": ""
+        },
+        "email": {
+            "type": "string",
+            "required": true,
+            "comments": ""
+        },
+        "mobile": {
+            "type": "string",
+            "required": true
+        },
+        "message": {
+            "type": "string",
+            "comments": "message entered by user"
+        },
+        "Source": {
+            "type": "string",
+            "required": true,
+            "comments": "Contact page is filled from which page of website"
+        },
+        "videoIds": {
+            "type": "array",
+            "required": true,
+            "index": true,
+            "comments": "Videos in which user is interested"
+        },
+        "created": {
+            "type": "date",
+            "required": true
+        },
+        "updated": {
+            "type": "date",
+            "required": true,
+            "default": "$now"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}
