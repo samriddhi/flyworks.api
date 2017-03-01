@@ -5,7 +5,9 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
-app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
 app.start = function() {
   // start the web server
   return app.listen(function() {

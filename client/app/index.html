@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title><%= title %></title>
+    <title>Flyworks Media</title>
 
     <!--
     The base allows us to use relative links to resources even when
@@ -38,7 +38,10 @@
       </ul>
     </div>
 
-    <div ng-view></div>
+    <div class="container view-container">
+      <div ng-view></div>
+    </div>
+    
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -58,12 +61,17 @@
 
         <!-- build:js({.tmp,ngapp,.}) scripts/scripts.js -->        
 
-         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 
-        <script src="config/homepageRoutes.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/contactCtrl.js"></script>
+        <script src="scripts/app.module.js"></script>
+        <script src="scripts/app.config.js"></script>
+        <!-- CONTROLLERS -->
+        <script src="scripts/controllers/homeController.js"></script>
+        <script src="scripts/controllers/contactController.js"></script>
+
+        <!-- MODULES -->
+        <script src="scripts/modules/testModule.js"></script>
         <!-- endbuild -->
 </body>
 </html>

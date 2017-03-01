@@ -21,7 +21,7 @@ Things to do:
 6. Common Folder contains models in use for backend APIs. Their references with data sources are in server folder .
 7. ejs is added as template engine in dependencies and the same is set in server.js
 8. configuration like indexFile are defined in config.local.js
-9. "files" field in middleware.json is pointed to client/site/ folder to load angular files. This field is used to load static content in loopback.
+9. "files" field in middleware.json is pointed to client/app/ folder to load angular files. This field is used to load static content in loopback.
 10. Added Dependency package of request to allow rest api calls on loopback from node.
 11. Added body parser json dependency in loopback middleware.json under element named as parse.
 12. Query Collection added in DB.
