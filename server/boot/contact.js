@@ -3,10 +3,9 @@ module.exports = function(app) {
     var request = require("request");
     var urlUtilities = require("../utilities/url")(app);
 
-    app.post('/submit', function(req, res) {        
+    app.post('/submit', function(req, res) {
         var BaseUrl = urlUtilities.getRestApiBaseUrl();
-        var queryRestApiUrl = BaseUrl + "queries";
-
+        var queryApiUrl = BaseUrl + "/queries";
         var userDetails = req.body.userDetails;
         var querySource = req.body.querySource;
 
@@ -21,10 +20,13 @@ module.exports = function(app) {
         }
 
         request.post({
-            url: queryRestApiUrl,
+            url: queryApiUrl,
             form: data
-        }, function(err, httpResponse, body) {
-            console.log('response returned');
+        }, function(err, response, body) {
+            if (!err && response.statusCode === 200) {
+                //Sending data back to Ajax 
+                res.end(body);
+            }
         });
 
     });

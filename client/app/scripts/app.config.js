@@ -1,21 +1,24 @@
 'use strict';
-angular.
-  module('flyworksApp').
-  config(['$locationProvider', '$routeProvider',
-    function config($locationProvider, $routeProvider) {
-      $locationProvider.hashPrefix('!');
 
-      $routeProvider.
+flyworksApp.config(['$locationProvider', '$routeProvider',
+    function config($locationProvider, $routeProvider) {
+        $locationProvider.hashPrefix('!');
+
+        $routeProvider.
         when('/', {
-          controller: 'homeController',
-          templateUrl:  '/views/home.html'
+            controller: 'homeController',
+            templateUrl: '/views/home.html'
+        }).
+        when('/videos', {
+            controller: 'videoController',
+            templateUrl: '/views/videos.html'
         }).
         when('/contact', {
-          controller: 'contactController',
-          templateUrl: '/views/contact.html'
+            controller: 'contactController',
+            templateUrl: '/views/contact.html'
         }).
         when('/test', {
-          template: '<testModule></testModule>'
+            template: '<testModule></testModule>'
         }).
         otherwise('/');
 
