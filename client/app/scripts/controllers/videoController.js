@@ -1,11 +1,16 @@
 flyworksApp.controller('videoController', function($scope, $http) {
     console.log('In Video Controller');
-    $http.get('/videos')
-        .success(function(response) {
-            console.log(response);
-        })
-        .error(function(response) {
-            console.log(response);
-        })
-    return;
+
+    $scope.videoData =  return $http.get('/videos')
+        .then(
+            function(response) {
+                // success callback
+                console.log(response);
+                return response.data;                
+            },
+            function(error) {
+                // failure callback
+                console.log(error);
+            }
+        );    
 });

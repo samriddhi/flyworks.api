@@ -11,6 +11,8 @@ Changes:
 Things to do:
 * Add production datasources
 * Resolve Conflicts between datasources.json, datasources.local.json, datasources.production.json
+* How to move request package and urlUtitlies to middleware.json
+* How to send specific data using pipe with error handling of status code
 
 
 
