@@ -11,7 +11,13 @@ flyworksApp.config(['$locationProvider', '$routeProvider',
         }).
         when('/videos', {
             controller: 'videoController',
-            templateUrl: '/views/videos.html'
+            templateUrl: '/views/videos.html',
+            resolve: {
+                videos: function(videoService) {
+                    console.log("in resolve");
+                    videoService.getVideos();
+                }
+            }
         }).
         when('/contact', {
             controller: 'contactController',
