@@ -29,3 +29,4 @@ Things to do:
 11. Added body parser json dependency in loopback middleware.json under element named as parse.
 12. Query Collection added in DB.
 13. Added Utilities Folder in server.
+14. Added Service folder for factory implementations.

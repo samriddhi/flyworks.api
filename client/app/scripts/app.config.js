@@ -14,8 +14,7 @@ flyworksApp.config(['$locationProvider', '$routeProvider',
             templateUrl: '/views/videos.html',
             resolve: {
                 videos: function(videoService) {
-                    console.log("in resolve");
-                    videoService.getVideos();
+                    return videoService.getVideos();
                 }
             }
         }).
