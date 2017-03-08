@@ -1,15 +1,18 @@
 'use strict';
 
-flyworksApp.config(['$locationProvider', '$routeProvider',
-    function config($locationProvider, $routeProvider) {
-        $locationProvider.hashPrefix('!');
+flyworksApp.config(['$stateProvider', '$urlRouterProvider',
+    function config($stateProvider, $urlRouterProvider) {
 
-        $routeProvider.
-        when('/', {
+        $urlRouterProvider.otherwise('/');
+        
+        $stateProvider.
+        state('/', {
+            url: '/',
             controller: 'homeController',
             templateUrl: '/views/home.html'
         }).
-        when('/videos', {
+        state('videos', {
+            url: '/videos',
             controller: 'videoController',
             templateUrl: '/views/videos.html',
             resolve: {
@@ -18,15 +21,14 @@ flyworksApp.config(['$locationProvider', '$routeProvider',
                 }
             }
         }).
-        when('/contact', {
+        state('contact', {
+            url: '/contact',
             controller: 'contactController',
             templateUrl: '/views/contact.html'
         }).
-        when('/test', {
+        state('/test', {
             template: '<testModule></testModule>'
-        }).
-        otherwise('/');
+        });
 
-        $locationProvider.html5Mode(true);
     }
 ]);
