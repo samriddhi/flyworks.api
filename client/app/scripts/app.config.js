@@ -1,10 +1,14 @@
 'use strict';
 
-flyworksApp.config(['$stateProvider', '$urlRouterProvider',
-    function config($stateProvider, $urlRouterProvider) {
+flyworksApp.config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
+    function config($stateProvider, $urlRouterProvider, $httpProvider) {
+
+$httpProvider.defaults.useXDomain = true;
+delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
 
         $urlRouterProvider.otherwise('/');
-        
+
         $stateProvider.
         state('/', {
             url: '/',
@@ -18,6 +22,9 @@ flyworksApp.config(['$stateProvider', '$urlRouterProvider',
             resolve: {
                 videos: function(videoService) {
                     return videoService.getVideos();
+            },
+                vHtml: function(videoService) {
+                    return videoService.getVimeoHtml();                    
                 }
             }
         }).

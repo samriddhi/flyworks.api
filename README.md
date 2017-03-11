@@ -31,7 +31,7 @@ LOCAL SETUP :-
 
 DATA SOURCE & MODEL CONFIGURATION :-
 This can be done in two ways :-
-1. Terminal - Run slc:loopback model 
+1. Terminal - Read https://loopback.io/doc/en/lb3/Command-line-tools.html
 2. Browser UI - Run strong-studio on terminal.  Opens an application in UI. Sign up using username & password (for first time).
 
 DESCRIPTION :-
