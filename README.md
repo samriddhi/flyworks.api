@@ -1,5 +1,6 @@
 Recent Changes:
 * Changed routing implementation from ngRoute to ui router.
+* Vimeo Integration using oembed Api and iframe.
 
 Things to do:
 * Add production datasources
@@ -47,3 +48,19 @@ DESCRIPTION :-
 # Service folder for factory & services.
 # app.config.js - Angular Site routes with respective controllers and views.
 # ui router used instead of ngRoute for angular routing.
+
+
+
+ACCOUNT CREDENTIALS:-
+
+1. Gmail :- 
+	Username - flyworksmedia
+	Password - california@12
+
+2. Vimeo :- 
+	Username - flyworksmedia
+	Password - california@12
+
+3. Local Mongo :- 
+	Username - developer
+	Password - california@12
