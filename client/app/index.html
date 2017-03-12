@@ -1,15 +1,14 @@
 <!doctype html>
 <html class="no-js" ng-app="flyworksApp">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Flyworks Media</title>
-
     <!--
     The base allows us to use relative links to resources even when
     this page was served from non-root URL, e.g. '/my/todos'
     -->
     <base href="/">
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -40,7 +39,6 @@
               </button>
               <a class="navbar-brand" href="#">Flyworks Media</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
@@ -53,12 +51,10 @@
           </div><!-- /.container-fluid -->
         </nav>
       </div>
-
     <!-- Add your site or application content here -->
     <div class="view-container">
       <div ng-view></div>
     </div>
-
     
     <footer class="footer-container">
       <div class="container">
@@ -72,7 +68,6 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <!--
@@ -83,20 +78,21 @@
     -->
     <!-- endbower -->
     <!-- endbuild -->
+    <!-- build:js({.tmp,ngapp,.}) scripts/scripts.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
 
-        <!-- build:js({.tmp,ngapp,.}) scripts/scripts.js -->        
+    <script src="scripts/app.module.js"></script>
+    <script src="scripts/app.config.js"></script>
+    <!-- SERVICES -->
+    <script src="scripts/services/videoService.js"></script>
+    <!-- CONTROLLERS -->
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/videoController.js"></script>
+    <script src="scripts/controllers/contactController.js"></script>
+    <!-- MODULES -->
 
-         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
-         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-
-        <script src="scripts/app.module.js"></script>
-        <script src="scripts/app.config.js"></script>
-        <!-- CONTROLLERS -->
-        <script src="scripts/controllers/homeController.js"></script>
-        <script src="scripts/controllers/contactController.js"></script>
-
-        <!-- MODULES -->
-        <script src="scripts/modules/testModule.js"></script>
-        <!-- endbuild -->
+    <!-- endbuild -->
 </body>
+
 </html>

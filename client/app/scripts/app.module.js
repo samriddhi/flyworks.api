@@ -1,5 +1,5 @@
 'use strict';
 // (function(){}())
 let flyworksApp = angular.module('flyworksApp', [
-  'ngRoute', 'testModule'
+  'ui.router', 'testModule'
 ]);

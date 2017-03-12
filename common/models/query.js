@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(query) {
+module.exports = function(Query) {
 
 };

@@ -9,7 +9,6 @@
         "url": "",
         "database": "flyworks",
         "name": "flyworks",
-        "user": "developer",
         "connector": "mongodb"
     }
 }

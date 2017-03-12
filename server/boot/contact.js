@@ -1,13 +1,13 @@
 module.exports = function(app) {
 
     var request = require("request");
+    var urlUtilities = require("../utilities/url")(app);
 
     app.post('/submit', function(req, res) {
-        var BaseUrl = "http://0.0.0.0:4000/api/";
-        var url = BaseUrl + "queries";
-
+        var BaseUrl = urlUtilities.getRestApiBaseUrl();
+        var queryApiUrl = BaseUrl + "/queries";
         var userDetails = req.body.userDetails;
-        var pageInfo = req.body.pageInfo;
+        var querySource = req.body.querySource;
 
         var data = {
             "name": userDetails.name,
@@ -15,15 +15,18 @@ module.exports = function(app) {
             "mobile": userDetails.mobile,
             "videoIds": userDetails.videos,
             "message": userDetails.message,
-            "Source": pageInfo.source,
+            "Source": querySource,
             "created": new Date()
         }
 
         request.post({
-            url: url,
+            url: queryApiUrl,
             form: data
-        }, function(err, httpResponse, body) {
-            console.log('response returned');
+        }, function(err, response, body) {
+            if (!err && response.statusCode === 200) {
+                //Sending data back to Ajax 
+                res.end(body);
+            }
         });
 
     });
