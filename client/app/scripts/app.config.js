@@ -14,8 +14,17 @@ angular.
           controller: 'contactController',
           templateUrl: '/views/contact.html'
         }).
-        when('/test', {
-          template: '<testModule></testModule>'
+        when('/about', {
+          controller: 'aboutController',
+          templateUrl: '/views/about.html'
+        }).
+        when('/products', {
+          controller: 'productController',
+          templateUrl: '/views/product.html'
+        }).
+        when('/videos',{
+          controller: 'videoController',
+          templateUrl: '/views/videos.html'
         }).
         otherwise('/');
 
