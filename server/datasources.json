@@ -9,6 +9,8 @@
         "url": "",
         "database": "flyworks",
         "name": "flyworks",
+        "user": "developer",
+        "password": "california",
         "connector": "mongodb"
     }
 }
