@@ -1,6 +1,7 @@
 Recent Changes:
 * Changed routing implementation from ngRoute to ui router.
-* Vimeo Integration using oembed Api and iframe.
+* Vimeo Integration using oembed Api and iframe at frontend.
+* Created app in vimeo and integrated backend apis.
 
 Things to do:
 * Add production datasources
@@ -48,6 +49,7 @@ DESCRIPTION :-
 # Service folder for factory & services.
 # app.config.js - Angular Site routes with respective controllers and views.
 # ui router used instead of ngRoute for angular routing.
+# You’ll only need to register your application if you’re using the API. There’s no need to have one if you’re only using oEmbed.
 
 
 
