@@ -20,15 +20,6 @@ flyworksApp.config(['$stateProvider', '$urlRouterProvider',
                     return videoService.getVideos();
                 }
             }
-        }).
-        state('contact', {
-            url: '/contact',
-            controller: 'contactController',
-            templateUrl: '/views/contact.html'
-        }).
-        state('/test', {
-            template: '<testModule></testModule>'
         });
-
     }
 ]);
