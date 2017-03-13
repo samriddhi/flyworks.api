@@ -1,33 +1,30 @@
 <style>
-  .jumbotron{
-      background-image: url(http://i.stack.imgur.com/spmUM.gif);
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-  .contact-container{
+.jumbotron {
+    background-image: url(http://i.stack.imgur.com/spmUM.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-container {
     padding-top: 20px;
     background-color: #B8E1FF;
-  }
+}
 </style>
-
 <div class="home-container">
-  <div class="jumbotron" style="margin-top:-20px;height:{{jumbo.height - 50}}px;">
-  <h1>Hello, world!</h1>
-  <p>...</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Videos Products</h3>
-      
+    <div class="jumbotron" style="margin-top:-20px;height:{{jumbo.height - 50}}px;">
+        <h1>Hello, world!</h1>
+        <p>...</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
     </div>
-  </div>
-</div>
-
-<div class="contact-container">
-  <contact-form></contact-form>  
-</div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Videos Products</h3>
+                <div ui-view="products"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-container">
+        <div ui-view="contact"></div>
+    </div>
 </div>

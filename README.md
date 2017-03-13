@@ -9,6 +9,7 @@ Things to do:
 * How to move request package and urlUtitlies to middleware.json
 * How to send specific data using pipe with error handling of status code
 * Setup of Compose as data source.
+* Avoid CDN for better page load performance. setup local libraries for angular and bootstrap
 
 
 TO READ :- 

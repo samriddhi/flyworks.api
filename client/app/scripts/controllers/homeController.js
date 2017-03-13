@@ -9,10 +9,3 @@ flyworksApp.controller('homeController', function($scope, $http, $window){
   console.log($window.innerHeight);
   console.log($window.innerWidth);
 })
-.directive('contactForm', function(){
-  return{
-    restrict: 'E',
-    templateUrl: 'views/contact.html',
-    controller: 'contactController'
-  }
-});

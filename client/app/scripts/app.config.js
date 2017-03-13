@@ -8,8 +8,25 @@ flyworksApp.config(['$stateProvider', '$urlRouterProvider',
         $stateProvider.
         state('/', {
             url: '/',
-            controller: 'homeController',
-            templateUrl: '/views/home.html'
+            resolve: {
+                videos: function(videoService) {
+                    return videoService.getVideos();
+                }
+            },
+            views: {
+                '': {
+                    controller: 'homeController',
+                    templateUrl: '/views/home.html'
+                },
+                'products@/': {
+                    controller: 'videoController',
+                    templateUrl: '/views/videos.html'
+                },
+                'contact@/': {
+                    controller: 'contactController',
+                    templateUrl: '/views/contact.html'
+                }
+            }
         }).
         state('products', {
             url: '/videos',
@@ -32,9 +49,24 @@ flyworksApp.config(['$stateProvider', '$urlRouterProvider',
         state('contact', {
             url: '/contact',
             controller: 'contactController',
-            templateUrl: '/views/contact.html',
+            //templateUrl: '/views/contact.html',
+            templateUrl: function() {
+                return '/views/contact.html';
+            },
             resolve: {
-
+                title: function() {
+                    return 'I am Hereee';
+                }
+            },
+            onEnter: function(title) {
+                if (title) {
+                    console.log('Entry in contact dependency');
+                }
+            },
+            onExit: function(title) {
+                if (title) {
+                    console.log('Exit from contact dependency');
+                }
             }
         });
     }

@@ -6,21 +6,26 @@ flyworksApp.controller('videoController', function($scope, videos) {
 
         var js = document.createElement('script');
         js.setAttribute('type', 'text/javascript');
-        js.setAttribute('src', url);
+        js.setAttribute('src', getUrl());
         document.getElementsByTagName('head').item(0).appendChild(js);
+
+        function getUrl() {
+            var videoUrl = 'http://www.vimeo.com/208017372';
+
+            // This is the oEmbed endpoint for Vimeo (we're using JSON)
+            // (Vimeo also supports oEmbed discovery. See the PHP example.)
+            var endpoint = 'http://www.vimeo.com/api/oembed.json';
+
+            // Tell Vimeo what function to call
+            var callback = 'embedVideo';
+
+            // Put together the URL
+            var url = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=640';
+
+            return url;
+        }
     }
 
-    var videoUrl = 'http://www.vimeo.com/208017372';
-
-    // This is the oEmbed endpoint for Vimeo (we're using JSON)
-    // (Vimeo also supports oEmbed discovery. See the PHP example.)
-    var endpoint = 'http://www.vimeo.com/api/oembed.json';
-
-    // Tell Vimeo what function to call
-    var callback = 'embedVideo';
-
-    // Put together the URL
-    var url = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=640';
 
 });
 

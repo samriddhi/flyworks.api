@@ -19,4 +19,8 @@ flyworksApp.controller('contactController', function($scope, $http) {
                 }
             );
     }
+
+    $scope.$on('$viewContentLoaded', function() {
+        console.log('contact view is loaded completely');
+    });
 });
