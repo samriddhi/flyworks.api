@@ -1,52 +1,58 @@
-<form class="form-horizontal" ng-submit="submit()">
-    <fieldset>
-        <!-- Form Name -->
-        <legend>Contact</legend>
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="name">Your Name</label>
-            <div class="col-md-4">
-                <input ng-model="userDetails.name" name="name" type="text" placeholder="Enter Your Name" class="form-control input-md" required="">
-            </div>
+<style>
+    .title{text-align: center;}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 class="title">Contact Us</h4>
+            <form class="form-horizontal" name="contactForm"  ng-submit="submit()" novalidate>
+                <div class="form-group">
+                    <label for="inputName" class="col-sm-1 control-label">Name</label>
+                    <div class="col-sm-11">
+                    <input type="text" class="form-control" id="inputName" placeholder="Jane Doe" ng-model="userDetails.name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-sm-1 control-label">Email</label>
+                    <div class="col-sm-11">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="jane@example.com" ng-model="userDetails.email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPhone" class="col-sm-1 control-label">Phone</label>
+                    <div class="col-sm-11">
+                        <input type="number" class="form-control" id="inputPhone" placeholder="1234567890" ng-model="userDetails.mobile">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="selectInterest">Topics</label>
+                    <div class="col-sm-11">
+                        <select class="form-control" name="selectInterest" multiple="multiple"  ng-model="userDetails.videos">
+                            <option>Options 1</option>
+                            <option>Options 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="message">Message</label>
+                     <div class="col-sm-11">
+                        <textarea 
+                            ng-model="userDetails.message" 
+                            name="message" 
+                            type="text" 
+                            placeholder="Ennui migas mumblecore flannel fingerstache. Leggings put a bird on it YOLO poke. Meh kale chips locavore listicle, helvetica food truck crucifix yr vape truffaut kombucha pickled ramps. Bespoke ramps skateboard +1, man braid meggings meh af fashion axe sartorial. Live-edge raclette normcore, distillery DIY selfies cornhole next level succulents occupy literally. Bicycle rights bushwick banh mi yr. Farm-to-table kinfolk actually single-origin coffee tbh wayfarers cliche DIY, whatever cornhole four loko aesthetic raclette." 
+                            class="form-control input-md"
+                            rows="5" 
+                            required
+                            ng-model="userDetails.message"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                    <button type="submit" class="btn btn-primary pull-right">Send</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Your Email</label>
-            <div class="col-md-4">
-                <input ng-model="userDetails.email" name="email" type="text" placeholder="Enter Your Email Address" class="form-control input-md">
-            </div>
-        </div>
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="mobile">Mobile</label>
-            <div class="col-md-4">
-                <input ng-model="userDetails.mobile" name="mobile" type="text" placeholder="Optional" class="form-control input-md">
-                <span class="help-block">Enter Mobile/Landline with Extension</span>
-            </div>
-        </div>
-        <!-- Select Multiple -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="selectmultiple">Interested In</label>
-            <div class="col-md-4">
-                <select ng-model="userDetails.videos" name="selectmultiple" class="form-control" multiple="multiple">
-                    <option value="1">Option one</option>
-                    <option value="2">Option two</option>
-                </select>
-            </div>
-        </div>
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="message">Message</label>
-            <div class="col-md-4">
-                <input ng-model="userDetails.message" name="message" type="text" placeholder="optional" class="form-control input-md">
-            </div>
-        </div>
-        <!-- Button -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="submit"></label>
-            <div class="col-md-4">
-                <button name="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-    </fieldset>
-</form>
+    </div>
+</div>

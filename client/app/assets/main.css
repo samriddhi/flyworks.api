@@ -1,3 +1,4 @@
+html, body{font-family: 'Roboto', sans-serif;}
 .header .navbar{
     background-color: #13293D;
     color: #fff;
@@ -14,6 +15,16 @@
     font-weight: bold;
 }
 
+.ng-invalid.ng-dirty{
+    border-color: red;
+}
+.ng-valid.ng-dirty{
+    border-color: green;
+}
+textarea{
+    resize: none;
+}
+
 .footer-container {
     background-color: #13293D;
     color: #fff;
@@ -21,3 +32,11 @@
 .footer-container .copyright{
     text-align: center;
 }
+
+
+@media (max-width: 768px) { 
+    .form-horizontal .form-group{
+        margin-left: 15x;
+    }
+
+ }

@@ -1,5 +1,5 @@
+'use strict';
 flyworksApp.controller('contactController', function($scope, $http) {
-
     $scope.submit = function() {
         var data = {
             userDetails: this.userDetails,

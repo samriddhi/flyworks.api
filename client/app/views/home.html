@@ -4,6 +4,10 @@
       background-repeat: no-repeat;
       background-size: cover;
   }
+  .contact-container{
+    padding-top: 20px;
+    background-color: #B8E1FF;
+  }
 </style>
 
 <div class="home-container">
@@ -15,10 +19,15 @@
 
 <div class="container">
   <div class="row">
-    {{test}}
+    <div class="col-xs-12">
+      <h3>Videos Products</h3>
+      
+    </div>
   </div>
 </div>
 
-<div ng-include="contact.html"></div>
+<div class="contact-container">
+  <contact-form></contact-form>  
+</div>
 
 </div>
