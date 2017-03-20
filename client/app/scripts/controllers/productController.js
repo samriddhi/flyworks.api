@@ -1,4 +1,4 @@
 'use strict';
-flyworksApp.controller('aboutController', function($scope){
+flyworksApp.controller('productController', function($scope){
 
 });

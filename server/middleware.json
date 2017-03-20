@@ -1,6 +1,8 @@
 {
     "initial:before": {
-        "loopback#favicon": {}
+        "loopback#favicon": {
+        "params": "../flyworks.api/client/app/favicon.ico"
+        }
     },
     "initial": {
         "compression": {},

@@ -18,10 +18,7 @@ flyworksApp.config(['$stateProvider', '$urlRouterProvider',
                     controller: 'homeController',
                     templateUrl: '/views/home.html'
                 },
-                'products@/': {
-                    controller: 'videoController',
-                    templateUrl: '/views/videos.html'
-                },
+
                 'contact@/': {
                     controller: 'contactController',
                     templateUrl: '/views/contact.html'
