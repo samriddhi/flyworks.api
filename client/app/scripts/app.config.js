@@ -18,17 +18,30 @@ flyworksApp.config(['$stateProvider', '$urlRouterProvider',
                     controller: 'homeController',
                     templateUrl: '/views/home.html'
                 },
-
                 'contact@/': {
                     controller: 'contactController',
                     templateUrl: '/views/contact.html'
+                },
+                'about@/': {
+                    controller: 'aboutController',
+                    templateUrl: '/views/about.html'
+                }
+            }
+        }).
+        state('videos', {
+            url: '/videos',
+            controller: 'videoController',
+            templateUrl: '/views/videos.html',
+            resolve: {
+                videos: function(videoService) {
+                    return videoService.getVideos();
                 }
             }
         }).
         state('products', {
-            url: '/videos',
-            controller: 'videoController',
-            templateUrl: '/views/videos.html',
+            url: '/products',
+            controller: 'productController',
+            templateUrl: '/views/products.html',
             resolve: {
                 videos: function(videoService) {
                     return videoService.getVideos();

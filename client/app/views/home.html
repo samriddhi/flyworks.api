@@ -4,13 +4,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .contact-container {
     padding-top: 20px;
-    background-color: #B8E1FF;
+    background-color: #96BDC6;
 }
 </style>
 <div class="home-container">
+    <a id="home" name="home"></a>
     <div class="jumbotron" style="margin-top:-20px;height:{{jumbo.height - 50}}px;">
         <div class="jumbo-text col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-4">
             <h1>FlyWorks Media</h1>
@@ -18,15 +18,28 @@
             <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h3>Videos Products</h3>
-                <div ui-view="products"></div>
+    <div class="videop-container">
+        <a id="products" name="products"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="title">Videos Products</h4>
+                    <ul class="row">
+                        <li class="col-xs-6">Property Commercial</li>
+                        <li class="col-xs-6">Realestate Teaser</li>
+                        <li class="col-xs-6">Property Commercial</li>
+                        <li class="col-xs-6">Realestate Teaser</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    <div class="about-container">
+        <a id="about" name="about"></a>
+        <div ui-view="about"></div>
+    </div>
     <div class="contact-container">
+        <a id="contact" name="contact"></a>
         <div ui-view="contact"></div>
     </div>
 </div>
